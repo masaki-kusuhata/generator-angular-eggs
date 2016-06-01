@@ -10,7 +10,7 @@ module.exports = yeoman.Base.extend({
     this.directoryname = text.toLowerCase();
   },
   js: function () {
-    this.bulkCopy('_api.js', 'templates/server/'+ this.directoryname +'/api/_api.js');
-    this.bulkCopy('_data.json', 'templates/server/'+ this.directoryname +'/data/_data.json');
+    this.bulkCopy('_api.js', 'templates/server/'+ this.directoryname +'/_api.js');
+    this.bulkCopy('_data.json', 'templates/server/'+ this.directoryname +'/_data.json');
   }
 });
