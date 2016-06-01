@@ -29,12 +29,26 @@ yo angular-eggs
 
 ## Generators
 
-Available generators:
+### Available generators:
 
 - yo angular-eggs:components [name] [name(option)]
 - yo angular-eggs:service [name]
 - yo angular-eggs:resource [name]
 - yo angular-eggs:server [name]
+
+#### Create custom template
+
+- yo angular-eggs:componentsTemplate [name]
+- yo angular-eggs:serviceTemplate [name]
+- yo angular-eggs:resourceTemplate [name]
+- yo angular-eggs:serverTemplate [name]
+
+### Use created custom template
+
+- yo angular-eggs:customComponents [Created custom template Name] [name] [name(option)]
+- yo angular-eggs:customService [Created Custom template Name] [name]
+- yo angular-eggs:customResource [Created Custom template Name] [name]
+- yo angular-eggs:customServer [Created Custom template Name] [name]
  
 ## Notes
 
@@ -75,6 +89,27 @@ app/components/appcomp/appcomp.subcomp.ts
 app/components/appcomp/appcomp.subcomp.html
 test/components/appcomp/appcomp.subcomp.spec.ts
 ```
+
+## Custom template
+
+Case `yo angular-eggs:componentsTemplate template1`
+
+```bash
+templates/components/template1/_components.js
+templates/components/template1/_components.html
+templates/components/template1/_components.spec.js
+```
+
+## Custom component
+
+Case `yo angular-eggs:customComponents template1 appComp2 `
+
+```bash
+app/components/appcomp2/appcomp2.js
+app/components/appcomp2/appcomp2.html
+test/components/appcomp2/appcomp2.spec.js
+```
+
 
 ## Tasks
 
