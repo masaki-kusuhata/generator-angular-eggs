@@ -12,10 +12,10 @@ module.exports = yeoman.Base.extend({
     this.name = text.toLowerCase();
     this.className = text.charAt(0).toUpperCase() + text.slice(1);
     var templateUrl = this.destinationRoot() + '/templates/server';
-    this.serviceTemplateUrl =  templateUrl + '/' + templateName + '/';
+    this.serverTemplateUrl =  templateUrl + '/' + templateName + '/';
   },
   js: function () {
-    this.copy(this.serviceTemplateUrl + '_api.js', 'server/api/'+this.name+'.js');
-    this.copy(this.serviceTemplateUrl + '_data.json', 'server/data/'+this.name+'.json');
+    this.copy(this.serverTemplateUrl + '_api.js', 'server/api/'+this.name+'.js');
+    this.copy(this.serverTemplateUrl + '_data.json', 'server/data/'+this.name+'.json');
   }
 });
